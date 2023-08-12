@@ -1,9 +1,9 @@
-resource "azurerm_resource_group" "automate" {
+resource "azurerm_resource_group" "automate2" {
    name = var.resource_group_name
    location = var.location
 }
 
-resource "azurerm_kubernetes_cluster""automate" {
+resource "azurerm_kubernetes_cluster""automate2" {
     name = var.azure_resource_name
     location = var.location
     resource_group_name = var.resource_group_name
@@ -17,5 +17,5 @@ resource "azurerm_kubernetes_cluster""automate" {
     identity {
       type = "SystemAssigned"
   }
-    depends_on = [azurerm_resource_group.automate]
+    depends_on = [azurerm_resource_group.automate2]
 }
